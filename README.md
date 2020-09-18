@@ -12,7 +12,7 @@ Ce projet était d’abord simple avec un rectangle se déplaçant en ligne droi
 
 Finalement, ce projet m’a permis d’approfondir mes connaissances dans l’interaction des langages Web, d’occuper mon temps libre et de me donner une chance de me démarquer auprès de recruteurs. Il me reste encore plein d’idées à implémenter mais j’en resterai là car j’ai trouvé quelche chose de plus important : projet Canvas – Box2D.js
 
-[_Visiter le projet sur GitHub_](https://github.com/mondesirm/ai-car-game)  
+[_Visiter le projet sur GitHub_](https://github.com/mondesirm/ai-car-game/)  
 [_Laisser un commentaire sur WordPress_](https://mondesirm.wordpress.com/portfolio/ai-car-game/#respond)
 
 
