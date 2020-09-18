@@ -1,0 +1,174 @@
+html, body {
+	background-color: black !important;
+	margin: 0px;
+	padding: 0px;
+	overflow-x: hidden;
+	transition: height 0s, overflow-x 0.5s linear;
+}
+
+.scene {
+	float: left;
+	background-color: black;
+	width: 100%;
+	height: 500px;
+}
+
+.grass {
+	float: left;
+	background-color: #238C00;
+	width: 100%;
+	height: 100px;
+	color: white;
+}
+
+.road {
+	float: left;
+	background-color: grey;
+	width: 100%;
+	height: 300px;
+}
+
+.ai {
+	position: absolute;
+	margin-top: 50px;
+	background-color: black;
+	width: 100px;
+	height: 50px;
+	left: 5px;
+	border-radius: 10px;
+	box-shadow: -6px 10px 0px rgba(0,0,0,0.2);
+	transition: all 0.5s ease;
+	animation: idle 2s infinite ease;
+	z-index: 1;
+}
+
+/*@keyframes idles {
+	0%   { transform: translateX(5px); }
+	25%  { transform: translateX(10px)  translateY(10px); }
+	50%  { transform: translateX(20px) translateY(-10px); }
+	75%  { transform: translateX(10px) translateY(10px); }
+	100% { transform: translateX(5px); }
+}*/
+
+@keyframes idle {
+	0%   { transform: translateX(0px)  translateY(0px);  }
+	50%  { transform: translateX(10px) translateY(0px); }
+	50%  { transform: translateX(10px) translateY(0px);  }
+	100% { transform: translateX(0px)  translateY(0px); }
+}
+
+@keyframes blink {
+	100% { opacity:0.3; }
+}
+
+@keyframes line {
+	from { transform: translateX(0px);  }
+	to   { transform: translateX(-300px); }
+}
+
+@keyframes go {
+    0%   { left:0px;   }
+    25%  { left:200px; }
+    50%  { left:400px; }
+    75%  { left:600px; }
+    100% { left:800px; }
+}
+
+@keyframes bounce {
+    50% { transform: rotate(-5deg) translateY(-3px); }
+}
+
+@keyframes spin{
+	from { transform: rotate(0deg);  }
+	to   { transform: rotate(360deg); }
+}
+
+.wall {
+	position: absolute;
+	background-color: #B32D00;
+	width: 50px;
+	height: 100px;
+	right: -50px;
+	border-radius: 10px;
+	box-shadow: -6px 10px 0px rgba(0,0,0,0.2);
+	z-index: 2;
+}
+
+.line {
+	position: absolute;
+	background-color: white;
+	width: 100%;
+	height: 15px;
+	top: 115px;
+	right: 0px;
+}
+
+#l2 {
+	top: 242px;
+	width: 600px;
+	right: -600px;
+}
+
+#l3 {
+	top: 370px;
+}
+
+.sensor {
+	position: relative;
+	background-color: white;
+	opacity: 0.5;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+}
+
+.one, .three { top: -50px; left: 50px; }
+.two { top: -50px; left: 100px; width: 500px !important; }
+
+#stepsDone {
+	width: 50px;
+	text-align: center;
+}
+
+#stop {
+	display: none;
+}
+
+.debugArea {
+	width: 100%;
+	height: 100%;
+	float: left;
+	background-color: black;
+	text-align: center;
+	color: white;
+}
+
+.tableDebug {
+	width: 100%;
+}
+
+.tableDebugSmall {
+	width: 100%;
+}
+
+.info {
+	width: 100%;
+}
+
+.info li {
+	text-align: center;
+	list-style: none;
+}
+
+.list {
+	border: 1px solid white;
+}
+
+body > .debugArea {
+	opacity: 0;
+	transition: all 0.5s linear;
+}
+
+.debugArea:hover {
+	opacity: 1;
+}

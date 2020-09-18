@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AI Car</title>
+	<link rel='stylesheet' href='style.css'>
+	<link rel='shortcut icon' href='https://fakeimg.pl/700x500/fff%2C0/008bc4/?font=lobster&font_size=500&text=AI'>
+</head>
+
+<body id='body'>
+	<div class='scene'>
+		<div class='grass' id='topDebug'></div>
+
+		<div class='road' id='road'>
+			<div class='line' id='l1'></div>
+			<div class='ai' id='ai'>
+				<div class='sensor one'></div>
+				<div class='sensor two' id='two'></div>
+				<div class='sensor three'></div>
+			</div>
+			<div class='line' id='l2'></div>
+			<div class='wall' id='wall'></div>
+			<div class='line' id='l3'></div>
+		</div>
+
+		<div class='grass'></div>
+	</div>
+
+	<div class='debugArea'>
+		<input type='text' id='stepsDone' disabled value='0'>
+		<input id='start' type='button' value='Start' onclick='runSim(1,1)'>
+		<input id='stop' type='button' value='Stop' onclick='runSim(0,1)'>
+		<input id='x0.5' type='button' value='Slow' onclick='runSim(1,0.5)'>
+		<input id='x5' type='button' value='Fast' onclick='runSim(1,5)'><br>
+
+		<table class='tableDebug'>
+			<tr>
+				<td>AI Zone</td>
+				<td>Wall Zone</td>
+				<td>Experience Success</td>
+				<td>Trying</td>
+			</tr>
+			<tr>
+				<td id='t_ai_zone'>-</td>
+				<td id='t_wall_zone'>-</td>
+				<td id='t_exp_success'>-</td>
+				<td id='t_trying'>-</td>
+			</tr>
+		</table><hr>
+
+		<table class='tableDebugSmall'>
+			<thead>
+				<td>[AI Zone]</td>
+				<td>[Wall Zone]</td>
+				<td>[Enter Zone]</td>
+				<td>[Success]</td>
+			</thead>
+			<tr><td>0</td><td>0</td><td>0</td><td id='succ_000'>0</td></tr>
+			<tr><td>0</td><td>0</td><td>1</td><td id='succ_001'>0</td></tr>
+			<tr><td>0</td><td>1</td><td>0</td><td id='succ_010'>0</td></tr>
+			<tr><td>0</td><td>1</td><td>1</td><td id='succ_011'>0</td></tr>
+			<tr><td>1</td><td>0</td><td>0</td><td id='succ_100'>0</td></tr>
+			<tr><td>1</td><td>0</td><td>1</td><td id='succ_101'>0</td></tr>
+			<tr><td>1</td><td>1</td><td>0</td><td id='succ_110'>0</td></tr>
+			<tr><td>1</td><td>1</td><td>1</td><td id='succ_111'>0</td></tr>
+		</table><hr>
+
+		<div class='info'>
+			<h1>NOTES</h1>
+			<i>
+				<li>The road is divided horizontally into two zones : <u>Zone 0</u> and <u>Zone 1</u></li>
+				<li>The values in the cases (000) and (111) will progressively reach -11</li>
+				<li>Once they do, the AI will completely stop making errors (usually)</li>
+				<li>For a smooth visual experience, use the <button>Fast</button> button</li>
+				<li>5x is the max speed for a fully-fledged AI which currently has its CSS transition property set to 'ease-out'</li>
+			</i>
+		</div><hr>
+	</div>
+</body>
+
+<script src='script.js'></script>
+</html>
