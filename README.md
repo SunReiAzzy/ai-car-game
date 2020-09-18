@@ -1,14 +1,6 @@
----
-description: Projet personnel
----
-
-# AI Car Game
-
-## [AI Car Game](https://github.com/mondesirm/ai-car-game) sur GitHub
+# README.md
 
 ![Un &#xAB; jeu &#xBB; fait en HTML, CSS et Javascript](https://mondesirm.files.wordpress.com/2019/08/aitest-1.png)
-
-{% file src=".gitbook/assets/ai-car-game.zip" caption="Code Source" %}
 
 En recherchant un nouveau centre d’intérêt pendant les vacances d’été, je me suis penché vers l’intelligence artificielle. Avant de me former à des logiciels ou d’utiliser des API, j’ai décidé d’expérimenter sur une fausse intelligence artificielle, dite « surveillée » car elle n’apprendra pas toute seule mais grâce à des conditions.
 
@@ -22,4 +14,6 @@ Finalement, ce projet m’a permis d’approfondir mes connaissances dans l’in
 
 [_Visiter le projet sur GitHub_](https://github.com/mondesirm/ai-car-game)  
 __[_Laisser un commentaire sur WordPress_](https://mondesirm.wordpress.com/portfolio/ai-car-game/#respond)\_\_
+
+
 
